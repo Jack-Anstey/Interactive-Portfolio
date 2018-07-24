@@ -19,11 +19,40 @@ body
   text-align: center;
 }
 
+a
+{
+	&:link
+	{
+		color: $text-color;
+	}
+
+	&:hover
+	{
+		color: $text-color;
+	}
+
+	&:visited
+	{
+		color: $text-color;
+	}
+
+	&:active
+	{
+		color: $text-color;
+	}
+}
+
 .header
 {
   font-size: 8vh;
   font-weight: bold;
   font-style: italic;
+}
+
+.reducedHeader
+{
+	font-size: 5vh;
+	font-weight: bold;
 }
 
 .rowContainer
