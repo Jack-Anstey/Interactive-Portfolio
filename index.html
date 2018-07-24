@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type = "text/css" href="style.css"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+		<title>
+			Interactive Portfolio - Jack Anstey
+		</title>
+
+	</head>
+		<body>
+		<div class="m-scene" id="main">
+	  		<div class="m-header scene_element scene_element--fadeinup">
+				<p class = "header">Interactive Portfolio</p>
+				<p class = "header">Jack Anstey</p>
+			</div>
+
+			<div class = "faContainer">
+				<div class = "footer">
+					<div class = "fa-icon">
+						<div class = "footer-button highlight">
+							<span id = "faButton">
+								<i class = "fa fa-angle-double-down"></i>
+							</span>
+						</div>
+					</div>
+					<p class = "copyright">Copyright &copy; Jack Anstey 2018</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("faButton").onclick = function()
+			{
+				location.href = "whoami.html";
+			};
+		</script>
+		<script src="smoothState.js"></script>
+		<script src="transition.js"></script>
+		</body>
+	</html>

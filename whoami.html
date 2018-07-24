@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type = "text/css" href="style.css"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+		<title>
+			Who am I - Jack Anstey
+		</title>
+
+	</head>
+		<body>
+		<div class="m-scene" id="main">
+			<div class="m-aside scene_element scene_element--fadeinup">
+				<div class = "rowContainer">
+					<div><img src = "me.jpg" id = "headshot" alt ="A headshot of me"></div>
+					<div class = "columnContainer">
+						<p class = "header">Experience</p>
+						<p>I am Jack Anstey, a computer programmer from Seattle Washington</p>
+						<p>I have been programming for 6+ years in a multitude of languages.<br>These include:</p>
+						<ul>
+							<li>Java</li>
+							<li>HTML 5</li>
+							<li>PHP</li>
+							<li>Javascript</li>
+							<li>CSS/SCSS</li>
+							<li>mySql</li>
+							<li>Unreal Engine 4 Blueprint</li>
+						</ul>
+						<p>I am also highly expereinced in major Microsoft applications, being Word, Powerpoint, and Excel.</p>
+						<p>This encompasses Google equivilants (Docs, Slides, Sheets) aswell</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "faContainer">
+				<div class = "fa-icon">
+					<div class = "footer-button highlight">
+						<span id = "faButton">
+							<i class = "fa fa-angle-double-down"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("faButton").onclick = function()
+			{
+				location.href = "education.html";
+			};
+		</script>
+		<script src="smoothState.js"></script>
+		<script src="transition.js"></script>
+		</body>
+	</html>

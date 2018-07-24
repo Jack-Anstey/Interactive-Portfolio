@@ -1,0 +1,152 @@
+body
+{
+	font-family: 'Poppins', sans-serif;
+	font-size: 3vh;
+
+	/*dark grey*/
+	background-color: #8e8e8e;
+
+	/*off white for eyes*/
+	color: #efefef;
+
+	text-align: center;
+}
+
+.header
+{
+	font-size: 10vh;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.container
+{	
+	display: flex;
+	justify-content: center;
+	
+}
+.footer
+{
+	position: absolute;
+	bottom: 5vh;
+}
+
+
+
+/*font awesome icons are hella dope!*/
+.fa-icon
+{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	font-size: 10vh;
+}
+
+.footer-button
+{	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	/*base color of FA icon and border*/
+	color: #efefef;
+	border: 3px solid #efefef;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	margin: 20px 20px 20px 20px;
+	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
+	cursor: pointer;	
+}
+
+
+.footer-button: hover
+{
+	background-color: #8e8e8e;
+	border-color: #8e8e8e;
+}
+
+/*
+.footer-button:hover i 
+{
+	color: #228653;
+}
+*/
+
+.back-to-top 
+{
+	background-color: #8e8e8e;
+}
+
+/* makes a drop shadow on the circle when highlighted by the mouse */
+/* also adjusts border color */
+.back-to-top:hover 
+{
+	box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-color: #3d3d3d;
+} 
+
+/*changes FA icon color*/
+.back-to-top:hover i 
+{
+	color: #3d3d3d;
+}
+
+.copyright
+{
+	font-size: 2vh;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+ * CSS Page Transitions
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene 
+{
+  /** Basic styles for an animated element */
+  /** An element that fades in */
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides from the right */ 
+}
+  
+.m-scene .scene_element 
+{
+	animation-duration: 0.25s;
+	transition-timing-function: ease-in;
+	animation-fill-mode: both; 
+}
+.m-scene .scene_element--fadein 
+{
+	animation-name: fadeIn; 
+}
+.m-scene .scene_element--fadeinup 
+{
+	animation-name: fadeInUp; 
+}
+.m-scene .scene_element--fadeinright 
+{
+	animation-name: fadeInRight; 
+}

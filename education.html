@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type = "text/css" href="style.css"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+		<title>
+			Education - Jack Anstey
+		</title>
+
+	</head>
+		<body>
+		<div class="m-scene" id="main">
+			<div class="m-aside scene_element scene_element--fadeinup">
+				<div class = "rowContainer">
+					<div id = "schoolLogos">
+						<img src = "lakesidelogo.jpg" id = "lakeside" alt ="Lakeside School Logo">
+						<img src = "emorylogo.jpg" id = "emory" alt ="Emory University Logo">
+						<img src = "gtlogo.png" id = "gt" alt ="Georgia Tech Logo">
+					</div>
+					<div class = columnContainer>
+						<p class = "header">Education</p>
+						<p>Attended Lakeside School from 2014 to 2018</p>
+						<br>
+						<p>I am now attending Emory University as a Political Science Major</p>
+						<br>
+						<p>I am also a part of Emory's Dual Degree Program with Georgia Tech. Here, I am pursuing a BS in Computer Engineering</p>
+						<br>
+						<p>Research TBD</p>
+					</div>
+				</div>
+
+				<div class = "faContainer education" id = "education">
+					<div class = "fa-icon">
+						<div class = "footer-button highlight">
+							<span id = "faButton">
+								<i class = "fa fa-angle-double-down"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("faButton").onclick = function()
+			{
+				location.href = "experience.html";
+			};
+		</script>
+		<script src="smoothState.js"></script>
+		<script src="transition.js"></script>
+		</body>
+	</html>

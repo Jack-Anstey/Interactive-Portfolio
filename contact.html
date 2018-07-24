@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type = "text/css" href="style.css"/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+		<title>
+			Contact - Jack Anstey
+		</title>
+
+	</head>
+		<body>
+		<div class="m-scene" id="main">
+			<div class="m-aside scene_element scene_element--fadein">
+				<p class = "header">Contact Me</p>
+				<div class="social">
+					<div class="footer-button highlight" onclick="window.open('https://www.facebook.com/jack.anstey.129');"><i class="fa fa-facebook"></i></div>
+					<div class="footer-button highlight" onclick="window.open('https://www.linkedin.com/in/jack-a-852970138/');"><i class="fa fa-linkedin"></i></div>
+					<div class="footer-button highlight" onclick="javascript:window.location='mailto:janstey@emory.edu?subject=Portfolio Contact';"><i class="fa fa-envelope-o"></i></div>
+					<div class="footer-button highlight" onclick="window.open('https://github.com/JackaJacka123');"><i class="fa fa-github"></i></div>
+					<div class="footer-button highlight" onclick="window.open('https://www.instagram.com/jack.anstey/');"><i class="fa fa-instagram"></i></div>
+				</div>
+
+				<div class = "faContainer education" id = "contact">
+					<div class = "fa-icon">
+						<div class = "footer-button highlight">
+							<span id = "faButton">
+								<i class = "fa fa-angle-double-down"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("faButton").onclick = function()
+			{
+				location.href = "index.html";
+			};
+		</script>
+		<script src="smoothState.js"></script>
+		<script src="transition.js"></script>
+		</body>
+	</html>
