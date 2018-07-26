@@ -12,11 +12,11 @@ $fa-dark: #3d3d3d;
 
 body
 {
-  font-family: $font-stack;
-  font-size: 3vh;
-  background-color: $background-grey;
-  color: $text-color;
-  text-align: center;
+	font-family: $font-stack;
+	font-size: 3vh;
+	background-color: $background-grey;
+	color: $text-color;
+	text-align: center;
 }
 
 a
@@ -62,7 +62,7 @@ a
 	justify-content: space-around;
 }
 
-.social
+.rowCenter
 {
 	display: flex;
 	flex-direction: row;
@@ -77,9 +77,8 @@ a
 
 .faContainer
 { 
-  display: flex;
-  justify-content: center;
-  
+	display: flex;
+	justify-content: center;  
 }
 
 .footer
@@ -135,69 +134,82 @@ a
 }
 
 /*font awesome icons are hella dope!*/
-.fa-icon
+.faIcon
 {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  font-size: 10vh;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	font-size: 10vh;
 }
 
-.footer-button
+.footerButton
 { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
-  /*base color of FA icon and border*/
-  color: $text-color;
-  border: 3px solid $text-color;
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  margin: 20px 20px 20px 20px;
-  transition: all 0.2s cubic-bezier(.25,.1,.25,1);
-  cursor: pointer;
+	/*base color of FA icon and border*/
+	color: $text-color;
+	border: 3px solid $text-color;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	margin: 20px 20px 20px 20px;
+	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
+	cursor: pointer;
+}
+
+.button
+{
+	/*base color of FA icon and border*/
+	color: $text-color;
+	border: 3px solid $text-color;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	margin: 20px 20px 20px 20px;
+	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
+	cursor: pointer;
 }
 
 .highlight
 {
-  background-color: $background-grey;
+	background-color: $background-grey;
   
-  &:hover
-  {
-    /* makes a drop shadow on the circle when highlighted by the mouse */
-    /* also adjusts border color */
-    box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    border-color: $fa-dark;
-  }
+	&:hover
+	{
+		/* makes a drop shadow on the circle when highlighted by the mouse */
+		/* also adjusts border color */
+		box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		border-color: $fa-dark;
+	}
 
-  &:hover i 
-  {
-    /*changes FA icon color*/
-    color: $fa-dark;
-  }
+	&:hover i 
+	{
+		/*changes FA icon color*/
+		color: $fa-dark;
+	}
 }
 
 .copyright
 {
-  font-size: 2vh;
+	font-size: 2vh;
 }
 
 @keyframes fadeInUp 
 {
-  0% 
-  {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+	0% 
+	{
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
 
-  100% 
-  {
-    opacity: 1;
-    transform: none;
-  }
+	100% 
+	{
+		opacity: 1;
+		transform: none;
+	}
 }
 
 @keyframes fadeIn 

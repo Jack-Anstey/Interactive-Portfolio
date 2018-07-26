@@ -14,21 +14,28 @@
 	</head>
 		<body>
 		<div class="m-scene" id="main">
-	  		<div class="m-header scene_element scene_element--fadeinup">
+	  		<div class="m-header scene_element scene_element--fadein">
 				<p class = "header">Interactive Portfolio</p>
 				<p class = "header">Jack Anstey</p>
-			</div>
+				<div class="faContainer">
+					<div class="footerButton highlight" id = "whoButton"><i class="fa fa-info"></i></div>
+					<div class="footerButton highlight" id = "educationButton"><i class="fa fa-graduation-cap"></i></div>
+					<div class="footerButton highlight" id = "experienceButton"><i class="fa fa-building-o"></i></div>
+					<div class="footerButton highlight" id = "contactButton"><i class="fa fa-comments"></i></div>
+				</div>
 
-			<div class = "faContainer">
-				<div class = "footer">
-					<div class = "fa-icon">
-						<div class = "footer-button highlight">
-							<span id = "faButton">
-								<i class = "fa fa-angle-double-down"></i>
-							</span>
+				<!--password is currently Barbie7607-->
+				<div class = "faContainer">
+					<div class = "footer">
+						<div class = "faIcon">
+							<div class = "footerButton highlight">
+								<span id = "faButton">
+									<i class = "fa fa-angle-double-down"></i>
+								</span>
+							</div>
 						</div>
+						<p class = "copyright">Copyright &copy; Jack Anstey 2018</p>
 					</div>
-					<p class = "copyright">Copyright &copy; Jack Anstey 2018</p>
 				</div>
 			</div>
 		</div>
@@ -37,6 +44,26 @@
 			document.getElementById("faButton").onclick = function()
 			{
 				location.href = "whoami.html";
+			};
+
+			document.getElementById("whoButton").onclick = function()
+			{
+				location.href = "whoami.html";
+			};
+
+			document.getElementById("educationButton").onclick = function()
+			{
+				location.href = "education.html";
+			};
+
+			document.getElementById("experienceButton").onclick = function()
+			{
+				location.href = "experience.html";
+			};
+
+			document.getElementById("contactButton").onclick = function()
+			{
+				location.href = "contact.html";
 			};
 		</script>
 		<script src="smoothState.js"></script>
