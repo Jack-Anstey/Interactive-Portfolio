@@ -17,23 +17,49 @@
 			<div class="m-aside scene_element scene_element--fadein">
 				<p class = "header">Contact Me</p>
 				<div class="rowCenter">
-					<div class="footerButton highlight" onclick="window.open('https://www.facebook.com/jack.anstey.129');"><i class="fa fa-facebook"></i></div>
-					<div class="footerButton highlight" onclick="window.open('https://www.linkedin.com/in/jack-a-852970138/');"><i class="fa fa-linkedin"></i></div>
-					<div class="footerButton highlight" onclick="javascript:window.location='mailto:janstey@emory.edu?subject=Portfolio Contact';"><i class="fa fa-envelope-o"></i></div>
-					<div class="footerButton highlight" onclick="window.open('https://github.com/JackaJacka123');"><i class="fa fa-github"></i></div>
-					<div class="footerButton highlight" onclick="window.open('https://www.instagram.com/jack.anstey/');"><i class="fa fa-instagram"></i></div>
+					<div class="footerButton highlight" id = "face"><i class="fa fa-facebook"></i></div>
+					<div class="footerButton highlight" id = "linkedin"><i class="fa fa-linkedin"></i></div>
+					<div class="footerButton highlight" id = "mail"><i class="fa fa-envelope-o"></i></div>
+					<div class="footerButton highlight" id = "git"><i class="fa fa-github"></i></div>
+					<div class="footerButton highlight" id = "insta"><i class="fa fa-instagram"></i></div>
 				</div>
 
 				<div class = "faContainer footer">
 					<div class = "faIcon footerButton highlight" id = "faButton"><i class = "fa fa-angle-double-down"></i></div>
 				</div>
 			</div>
+			<p class = "copyright">Thank you for looking!</p>
 		</div>
 
 		<script>
 			document.getElementById("faButton").onclick = function()
 			{
 				location.href = "index.html";
+			};
+
+			document.getElementById("face").onclick = function()
+			{
+				window.open('https://www.facebook.com/jack.anstey.129');
+			};
+
+			document.getElementById("linkedin").onclick = function()
+			{
+				window.open('https://www.linkedin.com/in/jack-a-852970138/');
+			};
+
+			document.getElementById("mail").onclick = function()
+			{
+				javascript:window.location='mailto:janstey@emory.edu?subject=Portfolio Contact';
+			};
+
+			document.getElementById("git").onclick = function()
+			{
+				window.open('https://github.com/JackaJacka123');
+			};
+
+			document.getElementById("insta").onclick = function()
+			{
+				window.open('https://www.instagram.com/jack.anstey/');
 			};
 		</script>
 		<script src="smoothState.js"></script>
