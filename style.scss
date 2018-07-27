@@ -83,8 +83,12 @@ a
 
 .footer
 {
-  position: absolute;
-  bottom: 5vh;
+	margin-top: 20vh;
+}
+
+.smallFooter
+{
+	margin-top: 10vh;
 }
 
 #headshot
@@ -123,11 +127,6 @@ a
 	height: auto;
 }
 
-#education
-{
-	margin-top: 10vh;
-}
-
 #contact
 {
 	margin-top: 10vh;
@@ -158,10 +157,16 @@ a
 	margin: 20px 20px 20px 20px;
 	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
 	cursor: pointer;
+
 }
 
 .button
 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
 	/*base color of FA icon and border*/
 	color: $text-color;
 	border: 3px solid $text-color;
