@@ -10,6 +10,7 @@ $text-color: #efefef;
 /*dark grey*/
 $fa-dark: #3d3d3d;
 
+//sets basic font size, font, text color, and background color
 body
 {
 	font-family: $font-stack;
@@ -19,6 +20,7 @@ body
 	text-align: center;
 }
 
+//style for any given link
 a
 {
 	&:link
@@ -42,6 +44,13 @@ a
 	}
 }
 
+//copyright text size
+.copyright
+{
+	font-size: 2vh;
+}
+
+//header text size and style
 .header
 {
   font-size: 8vh;
@@ -49,46 +58,150 @@ a
   font-style: italic;
 }
 
+//subtext for icons spacing and sizing
+.subText
+{
+	font-size: 2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%
+}
+
+//smaller header text size and style
 .reducedHeader
 {
 	font-size: 5vh;
 	font-weight: bold;
 }
 
-.rowContainer
+//flex box with space-around instead of center
+.rowSpace
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
+//flex box with the center
 .rowCenter
-{
+{ 
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	justify-content: center;  
 }
 
+.homeGrid
+{
+	//sets the display in a grid
+	display: grid;
+	//centers the items
+	justify-items: center;
+	//sets the grid size
+	grid-template-columns: auto auto auto auto;
+	//makes the width of the div smaller and centers the div
+	width: 75vh;
+	margin: 0 auto;
+}
+
+.contactGrid
+{
+	//sets the display in a grid
+	display: grid;
+	//centers the items
+	justify-items: center;
+	//sets the grid size
+	grid-template-columns: auto auto auto auto auto;
+
+	width: 90vh;
+	margin: 0 auto;
+}
+
+//text to lay against pictures
 .columnContainer
 {
 	text-align: left;
 	margin-left: 5vh;
 }
 
-.faContainer
-{ 
-	display: flex;
-	justify-content: center;  
-}
-
+//Puts a seperation margin for a bottom button
 .footer
 {
-	margin-top: 20vh;
+	margin-top: 10vh;
 }
 
+//Puts a seperation margin for a bottom button
 .smallFooter
 {
 	margin-top: 10vh;
+}
+
+//Sets size and location for FA icon
+.faIcon
+{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	font-size: 10vh;
+}
+
+//FA button at the bottom of each page
+.footerButton
+{ 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	/*base color of FA icon and border*/
+	color: $text-color;
+	border: 3px solid $text-color;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	margin: 20px 20px 20px 20px;
+	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
+	cursor: pointer;
+
+}
+
+//creates the base for a FA icon
+.button
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	//base color of FA icon and border
+	color: $text-color;
+	border: 3px solid $text-color;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	margin: 20px 20px 20px 20px;
+	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
+	cursor: pointer;
+	
+}
+
+//Highlights fa icon when moused over
+.highlight
+{
+	background-color: $background-grey;
+  
+	&:hover
+	{
+		/* makes a drop shadow on the circle when highlighted by the mouse */
+		/* also adjusts border color */
+		box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		border-color: $fa-dark;
+	}
+
+	&:hover i 
+	{
+		/*changes FA icon color*/
+		color: $fa-dark;
+	}
 }
 
 #headshot
@@ -132,76 +245,6 @@ a
 	margin-top: 10vh;
 }
 
-/*font awesome icons are hella dope!*/
-.faIcon
-{
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	font-size: 10vh;
-}
-
-.footerButton
-{ 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-
-	/*base color of FA icon and border*/
-	color: $text-color;
-	border: 3px solid $text-color;
-	width: 10vh;
-	height: 10vh;
-	border-radius: 50%;
-	margin: 20px 20px 20px 20px;
-	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
-	cursor: pointer;
-
-}
-
-.button
-{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-
-	/*base color of FA icon and border*/
-	color: $text-color;
-	border: 3px solid $text-color;
-	width: 10vh;
-	height: 10vh;
-	border-radius: 50%;
-	margin: 20px 20px 20px 20px;
-	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
-	cursor: pointer;
-}
-
-.highlight
-{
-	background-color: $background-grey;
-  
-	&:hover
-	{
-		/* makes a drop shadow on the circle when highlighted by the mouse */
-		/* also adjusts border color */
-		box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-		border-color: $fa-dark;
-	}
-
-	&:hover i 
-	{
-		/*changes FA icon color*/
-		color: $fa-dark;
-	}
-}
-
-.copyright
-{
-	font-size: 2vh;
-}
-
 @keyframes fadeInUp 
 {
 	0% 
@@ -219,70 +262,67 @@ a
 
 @keyframes fadeIn 
 {
-  0% 
-  {
-    opacity: 0;
-  }
+	0% 
+	{
+		opacity: 0;
+	}
 
-  100% 
-  {
-    opacity: 1;
-  }
+	100% 
+	{
+		opacity: 1;
+	}
 }
 
 @keyframes fadeInRight 
 {
-  0% 
-  {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
+	0% 
+	{
+		opacity: 0;
+		transform: translate3d(100%, 0, 0);
+	}
 
-  100% 
-  {
-    opacity: 1;
-    transform: none;
-  }
+	100% 
+	{
+		opacity: 1;
+		transform: none;
+	}
 }
 
-/*
- * CSS Page Transitions
- * Don't forget to add vendor prefixes!
- */
+//CSS Page Transitions
 .m-scene 
 {
-  /** Basic styles for an animated element */
-  .scene_element 
-  {
-    animation-duration: 0.3s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
+	/** Basic styles for an animated element */
+	.scene_element 
+	{
+		animation-duration: 0.3s;
+		transition-timing-function: ease-in;
+		animation-fill-mode: both;
+	}
 
-  /** An element that fades in */
-  .scene_element--fadein 
-  {
-    animation-name: fadeIn;
-  }
+	/** An element that fades in */
+	.scene_element--fadein 
+	{
+		animation-name: fadeIn;
+	}
 
-  /** An element that fades in and slides up */
-  .scene_element--fadeinup 
-  {
-    animation-name: fadeInUp;
-  }
+	/** An element that fades in and slides up */
+	.scene_element--fadeinup 
+	{
+		animation-name: fadeInUp;
+	}
 
-  /** An element that fades in and slides from the right */
-  .scene_element--fadeinright 
-  {
-    animation-name: fadeInRight;
-  }
+	/** An element that fades in and slides from the right */
+	.scene_element--fadeinright 
+	{
+		animation-name: fadeInRight;
+	}
 
-  /** Reverse "exit" animations */
-  &.is-exiting 
-  {
-      .scene_element 
-      {
-        animation-direction: alternate-reverse;
-      }
-  }
+	/** Reverse "exit" animations */
+	&.is-exiting 
+	{
+		.scene_element 
+		{
+		animation-direction: alternate-reverse;
+		}
+	}
 }
