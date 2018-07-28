@@ -10,11 +10,17 @@ $text-color: #efefef;
 /*dark grey*/
 $fa-dark: #3d3d3d;
 
+$header-size: 7rem;
+
+$body-font-size: 3rem;
+
+$smaller-text: 2rem;
+
 //sets basic font size, font, text color, and background color
 body
 {
 	font-family: $font-stack;
-	font-size: 3vh;
+	font-size: $body-font-size;
 	background-color: $background-grey;
 	color: $text-color;
 	text-align: center;
@@ -47,13 +53,13 @@ a
 //copyright text size
 .copyright
 {
-	font-size: 2vh;
+	font-size: $smaller-text;
 }
 
 //header text size and style
 .header
 {
-  font-size: 8vh;
+  font-size: $header-size;
   font-weight: bold;
   font-style: italic;
 }
@@ -61,7 +67,7 @@ a
 //subtext for icons spacing and sizing
 .subText
 {
-	font-size: 2vh;
+	font-size: $smaller-text;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -72,7 +78,7 @@ a
 //smaller header text size and style
 .reducedHeader
 {
-	font-size: 5vh;
+	font-size: $body-font-size;
 	font-weight: bold;
 }
 
@@ -222,7 +228,7 @@ a
 #lakeside
 {
 	border: inset 5px;
-	width: 30vh;
+	width: 50vh;
 	height: auto;
 }
 
