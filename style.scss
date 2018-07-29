@@ -10,9 +10,9 @@ $text-color: #efefef;
 /*dark grey*/
 $fa-dark: #3d3d3d;
 
-$header-size: 7rem;
+$header-size: 5rem;
 
-$body-font-size: 3rem;
+$body-font-size: 2rem;
 
 $smaller-text: 2rem;
 
@@ -105,9 +105,13 @@ a
 	justify-items: center;
 	//sets the grid size
 	grid-template-columns: auto auto auto auto;
+	
+	justify-content: center;
+
+	grid-column-gap: 10vh;
 	//makes the width of the div smaller and centers the div
-	width: 75vh;
-	margin: 0 auto;
+	//width: 75vh;
+	//margin: 0 auto;
 }
 
 .contactGrid
@@ -119,8 +123,9 @@ a
 	//sets the grid size
 	grid-template-columns: auto auto auto auto auto;
 
-	width: 90vh;
-	margin: 0 auto;
+	justify-content: center;
+
+	grid-column-gap: 10vh;
 }
 
 //text to lay against pictures
