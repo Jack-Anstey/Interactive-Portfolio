@@ -1,4 +1,5 @@
 /**variables*/
+/*Site wide font*/
 $font-stack: 'Poppins', sans-serif;
 
 /*light grey*/
@@ -10,6 +11,7 @@ $text-color: #efefef;
 /*dark grey*/
 $fa-dark: #3d3d3d;
 
+/*Font sizes*/
 $header-size: 5rem;
 
 $body-font-size: 2rem;
@@ -215,47 +217,52 @@ a
 	}
 }
 
+//chevrons for education tab
+.downArrow
+{
+	color: $text-color;
+	font-size: $header-size;
+}
+
+/**These ids are for tailoring each specific image*/
 #headshot
 {
 	border: inset 5px;	
-	width: 80vh;
+	width: 750px;
 	height: auto;
 }
 
 #schoolLogos
 {
 	padding-top: 10vh;
-	//display: flex;
+	padding-left: 50px;
+	display: flex;
 	flex-direction: column;
-	//justify-content: center;
+	align-items: center;
 }
 
 #lakeside
 {
 	border: inset 5px;
-	width: 50vh;
+	width: 400px;
 	height: auto;
 }
 
 #emory
 {
 	border: inset 5px;
-	width: 30vh;
+	width: 800px;
 	height: auto;
 }
 
 #gt
 {
 	border: inset 5px;
-	width: 60vh;
+	width: 800px;
 	height: auto;
 }
 
-#contact
-{
-	margin-top: 10vh;
-}
-
+/**Animations for changing pages on the site*/
 @keyframes fadeInUp 
 {
 	0% 
