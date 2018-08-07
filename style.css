@@ -1,2 +1,244 @@
-body{font-family:"Poppins",sans-serif;font-size:2rem;background-color:#8e8e8e;color:#efefef;text-align:center}a:link{color:#efefef}a:hover{color:#efefef}a:visited{color:#efefef}a:active{color:#efefef}.copyright{font-size:2rem}.header{font-size:5rem;font-weight:bold;font-style:italic}.subText{font-size:2rem;display:flex;align-items:center;justify-content:center;height:100%;width:100%}.reducedHeader{font-size:2rem;font-weight:bold}.rowSpaceAround{display:flex;flex-direction:row;justify-content:space-around}.rowCenter{display:flex;justify-content:center}.homeGrid{display:grid;justify-items:center;grid-template-columns:auto auto auto auto;justify-content:center;grid-column-gap:10vh}.contactGrid{display:grid;justify-items:center;grid-template-columns:auto auto auto auto auto;justify-content:center;grid-column-gap:10vh}.columnContainer{text-align:left;margin-left:5vh}.footer{margin-top:10vh}.smallFooter{margin-top:10vh}.faIcon{display:flex;text-align:center;justify-content:center;font-size:10vh}.footerButton{display:flex;justify-content:center;align-items:center;text-align:center;color:#efefef;border:3px solid #efefef;width:10vh;height:10vh;border-radius:50%;margin:20px 20px 20px 20px;transition:all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);cursor:pointer}.button{display:flex;justify-content:center;align-items:center;text-align:center;color:#efefef;border:3px solid #efefef;width:10vh;height:10vh;border-radius:50%;margin:20px 20px 20px 20px;transition:all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);cursor:pointer}.highlight{background-color:#8e8e8e}.highlight:hover{box-shadow:0 10px 10px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);border-color:#3d3d3d}.highlight:hover i{color:#3d3d3d}.downArrow{color:#efefef;font-size:5rem}#headshot{border:inset 5px;width:750px;height:auto}#schoolLogos{padding-top:10vh;padding-left:50px;display:flex;flex-direction:column;align-items:center}#lakeside{border:inset 5px;width:400px;height:auto}#emory{border:inset 5px;width:800px;height:auto}#gt{border:inset 5px;width:800px;height:auto}@keyframes fadeInUp{0%{opacity:0;transform:translate3d(0, 100%, 0)}100%{opacity:1;transform:none}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeInRight{0%{opacity:0;transform:translate3d(100%, 0, 0)}100%{opacity:1;transform:none}}.m-scene .scene_element{animation-duration:0.3s;transition-timing-function:ease-in;animation-fill-mode:both}.m-scene .scene_element--fadein{animation-name:fadeIn}.m-scene .scene_element--fadeinup{animation-name:fadeInUp}.m-scene .scene_element--fadeinright{animation-name:fadeInRight}.m-scene.is-exiting .scene_element{animation-direction:alternate-reverse}
+/**variables*/
+/*Site wide font*/
+/*light grey*/
+/*off white for eyes*/
+/*dark grey*/
+/*Font sizes*/
+/* line 22, style.scss */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  background-color: #8e8e8e;
+  color: #efefef;
+  text-align: center; }
+
+/* line 34, style.scss */
+a:link {
+  color: #efefef; }
+/* line 39, style.scss */
+a:hover {
+  color: #efefef; }
+/* line 44, style.scss */
+a:visited {
+  color: #efefef; }
+/* line 49, style.scss */
+a:active {
+  color: #efefef; }
+
+/* line 56, style.scss */
+.copyright {
+  font-size: 2rem; }
+
+/* line 62, style.scss */
+.header {
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic; }
+
+/* line 70, style.scss */
+.subText {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%; }
+
+/* line 81, style.scss */
+.reducedHeader {
+  font-size: 2rem;
+  font-weight: bold; }
+
+/* line 88, style.scss */
+.rowSpaceAround {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+/* line 96, style.scss */
+.rowSpaceBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+/* line 104, style.scss */
+.rowCenter {
+  display: flex;
+  justify-content: center; }
+
+/* line 110, style.scss */
+.homeGrid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  grid-column-gap: 10vh; }
+
+/* line 127, style.scss */
+.contactGrid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+  grid-column-gap: 10vh; }
+
+/* line 142, style.scss */
+.columnContainer {
+  text-align: left;
+  margin-left: 50px; }
+
+/* line 149, style.scss */
+.footer {
+  margin-top: 10vh; }
+
+/* line 155, style.scss */
+.smallFooter {
+  margin-top: 10vh; }
+
+/* line 161, style.scss */
+.faIcon {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 10vh; }
+
+/* line 170, style.scss */
+.footerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*base color of FA icon and border*/
+  color: #efefef;
+  border: 3px solid #efefef;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  margin: 20px 20px 20px 20px;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  cursor: pointer; }
+
+/* line 190, style.scss */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #efefef;
+  border: 3px solid #efefef;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  margin: 20px 20px 20px 20px;
+  transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  cursor: pointer; }
+
+/* line 209, style.scss */
+.highlight {
+  background-color: #8e8e8e; }
+  /* line 213, style.scss */
+  .highlight:hover {
+    /* makes a drop shadow on the circle when highlighted by the mouse */
+    /* also adjusts border color */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-color: #3d3d3d; }
+  /* line 221, style.scss */
+  .highlight:hover i {
+    /*changes FA icon color*/
+    color: #3d3d3d; }
+
+/* line 229, style.scss */
+.downArrow {
+  color: #efefef;
+  font-size: 5rem;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+/* line 238, style.scss */
+#flexStart {
+  justify-content: flex-start; }
+
+/**These ids are for tailoring each specific image*/
+/* line 244, style.scss */
+#headshot {
+  border: inset 5px;
+  width: 750px;
+  height: auto; }
+
+/* line 251, style.scss */
+#schoolLogos {
+  padding-top: 10vh;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/* line 260, style.scss */
+#lakeside {
+  border: inset 5px;
+  width: 200px;
+  height: auto; }
+
+/* line 267, style.scss */
+#emory {
+  border: inset 5px;
+  width: 400px;
+  height: auto; }
+
+/* line 274, style.scss */
+#gt {
+  border: inset 5px;
+  width: 400px;
+  height: auto; }
+
+/* line 281, style.scss */
+#headshotMargin {
+  margin-top: 100px;
+  margin-left: 75px; }
+
+/**Animations for changing pages on the site*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+/* line 332, style.scss */
+.m-scene {
+  /** Basic styles for an animated element */
+  /** An element that fades in */
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides from the right */
+  /** Reverse "exit" animations */ }
+  /* line 335, style.scss */
+  .m-scene .scene_element {
+    animation-duration: 0.3s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both; }
+  /* line 343, style.scss */
+  .m-scene .scene_element--fadein {
+    animation-name: fadeIn; }
+  /* line 349, style.scss */
+  .m-scene .scene_element--fadeinup {
+    animation-name: fadeInUp; }
+  /* line 355, style.scss */
+  .m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight; }
+  /* line 363, style.scss */
+  .m-scene.is-exiting .scene_element {
+    animation-direction: alternate-reverse; }
+
 /*# sourceMappingURL=style.css.map */

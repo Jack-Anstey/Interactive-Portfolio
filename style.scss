@@ -92,6 +92,14 @@ a
 	justify-content: space-around;
 }
 
+//flex box with space-between instead of center
+.rowSpaceBetween
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 //flex box with the center
 .rowCenter
 { 
@@ -134,7 +142,7 @@ a
 .columnContainer
 {
 	text-align: left;
-	margin-left: 5vh;
+	margin-left: 50px;
 }
 
 //Puts a seperation margin for a bottom button
@@ -222,6 +230,14 @@ a
 {
 	color: $text-color;
 	font-size: $header-size;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+//moves all items to the left
+#flexStart
+{
+	justify-content: flex-start;
 }
 
 /**These ids are for tailoring each specific image*/
@@ -244,22 +260,28 @@ a
 #lakeside
 {
 	border: inset 5px;
-	width: 400px;
+	width: 200px;
 	height: auto;
 }
 
 #emory
 {
 	border: inset 5px;
-	width: 800px;
+	width: 400px;
 	height: auto;
 }
 
 #gt
 {
 	border: inset 5px;
-	width: 800px;
+	width: 400px;
 	height: auto;
+}
+
+#headshotMargin
+{
+	margin-top: 100px;
+	margin-left: 75px;
 }
 
 /**Animations for changing pages on the site*/
