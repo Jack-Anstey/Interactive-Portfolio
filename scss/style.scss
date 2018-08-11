@@ -2,14 +2,20 @@
 /*Site wide font*/
 $font-stack: 'Poppins', sans-serif;
 
-/*light grey*/
-$background-grey: #8e8e8e;
+/*light blue*/
+$background-color: #85c1e9;
+
+//old grey color
+//#8e8e8e;
 
 /*off white for eyes*/
 $text-color: #efefef;
 
-/*dark grey*/
-$fa-dark: #3d3d3d;
+/*navy blue*/
+$fa-dark: #1A5276;
+
+//old dark grey color
+//#3d3d3d;
 
 /*Font sizes*/
 $header-size: 5rem;
@@ -23,7 +29,7 @@ body
 {
 	font-family: $font-stack;
 	font-size: $body-font-size;
-	background-color: $background-grey;
+	background-color: $background-color;
 	color: $text-color;
 	text-align: center;
 }
@@ -185,7 +191,7 @@ a
 //Highlights fa icon when moused over
 .highlight
 {
-	background-color: $background-grey;
+	background-color: $background-color;
   
 	&:hover
 	{
@@ -218,13 +224,15 @@ a
 }
 
 /**These ids are for tailoring each specific image*/
+//who am i page
 #headshot
 {
-	border: inset 5px;	
+	border: solid 5px $text-color;	
 	width: 750px;
 	height: auto;
 }
 
+//experience page
 #schoolLogos
 {
 	padding-top: 10vh;
@@ -236,21 +244,21 @@ a
 
 #lakeside
 {
-	border: inset 5px;
+	border: solid 5px $text-color;
 	width: 200px;
 	height: auto;
 }
 
 #emory
 {
-	border: inset 5px;
+	border: solid 5px $text-color;
 	width: 400px;
 	height: auto;
 }
 
 #gt
 {
-	border: inset 5px;
+	border: solid 5px $text-color;
 	width: 400px;
 	height: auto;
 }
