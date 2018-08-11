@@ -157,33 +157,10 @@ a
 	margin-top: 10vh;
 }
 
-//Sets size and location for FA icon
-.faIcon
+//Sets custom font size for bottom button
+.doubleDIcon
 {
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	font-size: 10vh;
-}
-
-//FA button at the bottom of each page
-.footerButton
-{ 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-
-	/*base color of FA icon and border*/
-	color: $text-color;
-	border: 3px solid $text-color;
-	width: 10vh;
-	height: 10vh;
-	border-radius: 50%;
-	margin: 20px 20px 20px 20px;
-	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
-	cursor: pointer;
-
+	font-size: 4rem;
 }
 
 //creates the base for a FA icon
@@ -196,8 +173,8 @@ a
 	//base color of FA icon and border
 	color: $text-color;
 	border: 3px solid $text-color;
-	width: 10vh;
-	height: 10vh;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	margin: 20px 20px 20px 20px;
 	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
