@@ -22,7 +22,13 @@ $header-size: 5rem;
 
 $body-font-size: 2rem;
 
-$smaller-text: 2rem;
+$under-button-size: 25px;
+
+$smaller-text: 20px;//2rem;
+
+$button-size: 4vh;
+
+$button-size-chevron: 7vh;
 
 //sets basic font size, font, text color, and background color
 body
@@ -75,7 +81,7 @@ a
 //subtext for icons spacing and sizing
 .subText
 {
-	font-size: $smaller-text;
+	font-size: $under-button-size;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -113,35 +119,25 @@ a
 	justify-content: center;  
 }
 
-.homeGrid
+.gridTemplate
 {
 	//sets the display in a grid
 	display: grid;
-	//centers the items
-	justify-items: center;
 	//sets the grid size
-	grid-template-columns: auto auto auto auto;
-	
+	grid-template-columns: repeat(4, minmax(100px, 1fr));
+	//grid-column-gap: 40vh;
+	//centers the items
 	justify-content: center;
+	justify-items: center;
 
-	grid-column-gap: 10vh;
 	//makes the width of the div smaller and centers the div
 	//width: 75vh;
 	//margin: 0 auto;
 }
 
-.contactGrid
+.gridContact
 {
-	//sets the display in a grid
-	display: grid;
-	//centers the items
-	justify-items: center;
-	//sets the grid size
-	grid-template-columns: auto auto auto auto auto;
-
-	justify-content: center;
-
-	grid-column-gap: 10vh;
+	grid-template-columns: repeat(5, minmax(100px, 1fr));
 }
 
 //text to lay against pictures
@@ -163,12 +159,6 @@ a
 	margin-top: 10vh;
 }
 
-//Sets custom font size for bottom button
-.doubleDIcon
-{
-	font-size: 4rem;
-}
-
 //creates the base for a FA icon
 .button
 {
@@ -178,9 +168,10 @@ a
 	text-align: center;
 	//base color of FA icon and border
 	color: $text-color;
+	font-size: $button-size;
 	border: 3px solid $text-color;
-	width: 100px;
-	height: 100px;
+	width: 3*$button-size;//100px;
+	height: 3*$button-size;//100px;
 	border-radius: 50%;
 	margin: 20px 20px 20px 20px;
 	transition: all 0.2s cubic-bezier(.25,.1,.25,1);
@@ -223,6 +214,13 @@ a
 	justify-content: flex-start;
 }
 
+//moves the bottom button to the middle on mobile webpages
+#middleFix
+{
+	//display: block;
+	//margin-left: 100vh;
+}
+
 /**These ids are for tailoring each specific image*/
 //who am i page
 #headshot
@@ -242,6 +240,7 @@ a
 	align-items: center;
 }
 
+//education
 #lakeside
 {
 	border: solid 5px $text-color;
@@ -249,6 +248,7 @@ a
 	height: auto;
 }
 
+//education
 #emory
 {
 	border: solid 5px $text-color;
@@ -256,6 +256,7 @@ a
 	height: auto;
 }
 
+//education
 #gt
 {
 	border: solid 5px $text-color;
@@ -263,10 +264,18 @@ a
 	height: auto;
 }
 
+//whoami
 #headshotMargin
 {
 	margin-top: 100px;
 	margin-left: 75px;
+}
+
+//Sets custom font size for bottom button
+#faButton
+{
+	//font-size: 4rem;
+	font-size: $button-size-chevron;
 }
 
 /**Animations for changing pages on the site*/
