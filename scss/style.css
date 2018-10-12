@@ -79,10 +79,10 @@ a:active {
   align-items: center;
   text-align: center;
   color: #efefef;
-  font-size: 4vh;
+  font-size: 40px;
   border: 3px solid #efefef;
-  width: 12vh;
-  height: 12vh;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin: 20px 20px 20px 20px;
   transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -141,7 +141,7 @@ a:active {
   margin-left: 75px; }
 
 #faButton {
-  font-size: 7vh; }
+  font-size: 80px; }
 
 /**Animations for changing pages on the site*/
 @keyframes fadeInUp {
