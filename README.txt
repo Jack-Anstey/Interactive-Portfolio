@@ -1,6 +1,6 @@
 This is my personal portfolio. 
 
-All of this code is open source and wholly created by myself. 
+Besides CSS transition animations, all code is from myself and was built from scratch. 
 
 It is fine to use my code, just let me know and add a link to the repository in your web application.
 
