@@ -124,7 +124,6 @@ a
 	//sets the display in a grid
 	display: grid;
 	//sets the grid size
-	grid-template-columns: repeat(4, minmax(100px, 1fr));
 	//grid-column-gap: 40vh;
 	//centers the items
 	justify-content: center;
@@ -135,9 +134,14 @@ a
 	//margin: 0 auto;
 }
 
-.gridContact
+.gridIndex
 {
 	grid-template-columns: repeat(5, minmax(100px, 1fr));
+}
+
+.gridContact
+{
+	grid-template-columns: repeat(4, minmax(100px, 1fr));
 }
 
 //text to lay against pictures
@@ -206,6 +210,12 @@ a
 	font-size: $header-size;
 	margin-top: 30px;
 	margin-bottom: 30px;
+}
+
+//makes an indent for the unordered lists in the community page
+.indent
+{
+	padding-left: 100px;
 }
 
 //moves all items to the left
