@@ -8,28 +8,31 @@
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 		<title>
-			Education - Jack Anstey
+			Education – Jack Anstey
 		</title>
 
 	</head>
 		<body>
 		<div class="m-scene" id="main">
 			<div class="m-aside scene_element scene_element--fadein">
-				<div class = "rowSpaceAround">
-					<div id = "schoolLogos">
-						<a href = "https://www.lakesideschool.org/" target="_blank"><img src = "images\lakesidelogo.jpg" id = "lakeside" alt ="Lakeside School Logo"></a>
-						<div class = "downArrow"><i class="fa fa-chevron-down"></i></div>
-						<a href = "http://www.emory.edu/home/index.html" target="_blank"><img src = "images\emorylogowide.png" id = "emory" alt ="Emory University Logo"></a>
-						<div class = "downArrow"><i class="fa fa-chevron-down"></i></div>
-						<a href = "http://www.gatech.edu/" target="_blank"><img src = "images\gtlogo.png" id = "gt" alt ="Georgia Tech Logo"></a>
-					</div>
-					<div class = columnContainer>
-						<p class = "header">Education</p>
+				<p class = "header">Education</p>
+				
+				<div class = content>
+					<div class = "colContainer">
+						<a class = "rowCenter schoolLogos" href = "https://www.lakesideschool.org/" target="_blank"><img src = "images\lakesidelogo.jpg" id = "lakeside" alt ="Lakeside School Logo"></a>
 						<p>I graduated from Lakeside School in 2018</p>
-						<br>
-						<p>Now, I am attending Emory University seeking a BA in Political Science in the class of 2022</p>
-						<br>
-						<p>Ancipated 2021 matriculation to Georgia Tech, Dual Degree Program for Computer Engineering also class of 2023.</p>
+
+						<div class = "downArrow rowCenter"><i class="fa fa-chevron-down"></i></div>
+						<div><br></div>
+
+						<a class = "rowCenter schoolLogos" href = "http://polisci.emory.edu/home/undergraduate/degree-options/math-and-political-science.html" target="_blank"><img src = "images\emorylogowide.png" id = "emory" alt ="Emory University Logo"></a>
+						<p>Currently I am attending Emory University seeking a BA in Math & Political Science as a part of the class of 2022</p>
+
+						<div class = "downArrow rowCenter"><i class="fa fa-chevron-down"></i></div>
+						<div><br></div>
+
+						<a class = "rowCenter schoolLogos" href = "https://catalog.gatech.edu/programs/computer-engineering-bs/" target="_blank"><img src = "images\gtlogo.png" id = "gt" alt ="Georgia Tech Logo"></a>
+						<p>Ancipated 2021 matriculation to Georgia Tech through the Dual Degree Program for Computer Engineering as a part of the class of 2023. Learn more about Dual Degree <a href = "http://college.emory.edu/dual-degree/engineering/explore-engineering.html" target="_blank">here</a></p>
 					</div>
 				</div>
 
@@ -42,7 +45,7 @@
 		<script>
 			document.getElementById("faButton").onclick = function()
 			{
-				location.href = "community.html";
+				location.href = "experience.html";
 			};
 		</script>
 		<script src="smoothState.js"></script>

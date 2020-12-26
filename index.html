@@ -8,37 +8,38 @@
 		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 		<title>
-			Interactive Portfolio - Jack Anstey
+			Interactive Portfolio – Jack Anstey
 		</title>
 
 	</head>
 		<body>
 		<div class="m-scene" id="main">
 	  		<div class="m-header scene_element scene_element--fadein">
-				<p class = "header">Interactive Portfolio - Jack Anstey</p>
+				<p class = "header">Interactive Portfolio – Jack Anstey</p>
 				<div class="gridTemplate gridIndex">
 					<div class="button highlight" id = "whoButton"><i class="fa fa-info"></i></div>
 					<div class="button highlight" id = "educationButton"><i class="fa fa-graduation-cap"></i></div>
-					<div class="button highlight" id = "communityButton"><i class="fa fa-users"></i></div>
 					<div class="button highlight" id = "experienceButton"><i class="fa fa-building-o"></i></div>
+					<div class="button highlight" id = "communityButton"><i class="fa fa-users"></i></div>
 					<div class="button highlight" id = "contactButton"><i class="fa fa-comments"></i></div>
 				</div>
 				<div class = "gridTemplate gridIndex">
 					<div class = "subText">Introduction</div>
 					<div class = "subText">Education</div>
+					<div class = "subText">Work Experience</div>
 					<div class = "subText">Community</div>
-					<div class = "subText">Work</div>
 					<div class = "subText">Contact</div>	
 				</div>
 
 				<div class = "rowCenter footer">
 					<div class = "button highlight" id = "faButton"><i class = "fa fa-angle-double-down"></i></div>
 				</div>
-				<p class = "copyright">Copyright &copy; Jack Anstey 2018</p>
+				<p class = "copyright">Jack Anstey <script>document.write(new Date().getFullYear())</script></p>
 			</div>
 		</div>
 
 		<script>
+			//functions to make the buttons on the page redirect you to the next page
 			document.getElementById("faButton").onclick = function()
 			{
 				location.href = "whoami.html";

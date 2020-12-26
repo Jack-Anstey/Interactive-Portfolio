@@ -2,17 +2,26 @@
 /*Site wide font*/
 $font-stack: 'Poppins', sans-serif;
 
-/*light blue*/
-$background-color: #85c1e9;
+/*Color: light blue
+This is the color of the background for all of the pages
+*/
+$background-color: #474a4a;
+//#474a4a -- dark grey
+//#85c1e9 -- light blue
+
+/*Color: navy blue
+This is the color of the buttons as you hover over them
+*/
+$fa-dark: #848a8a;
+//#848a8a -- middle ground grey for when the background is a darker grey
+//#48cfd9 -- light blue for when the background is dark
+//#1A5276 -- navy blue for when the background is light
 
 //old grey color
 //#8e8e8e;
 
 /*off white for eyes*/
 $text-color: #efefef;
-
-/*navy blue*/
-$fa-dark: #1A5276;
 
 //old dark grey color
 //#3d3d3d;
@@ -31,8 +40,8 @@ $button-size: 40px;
 $button-size-chevron: 80px;
 
 //sets basic font size, font, text color, and background color
-body
-{
+body{
+	background: url("images\\white-diamond-dark.png") repeat;
 	font-family: $font-stack;
 	font-size: $body-font-size;
 	background-color: $background-color;
@@ -41,46 +50,38 @@ body
 }
 
 //style for any given link
-a
-{
-	&:link
-	{
+a{
+	&:link{
 		color: $text-color;
 	}
 
-	&:hover
-	{
+	&:hover{
 		color: $text-color;
 	}
 
-	&:visited
-	{
+	&:visited{
 		color: $text-color;
 	}
 
-	&:active
-	{
+	&:active{
 		color: $text-color;
 	}
 }
 
 //copyright text size
-.copyright
-{
+.copyright{
 	font-size: $smaller-text;
 }
 
 //header text size and style
-.header
-{
+.header{
   font-size: $header-size;
   font-weight: bold;
   font-style: italic;
 }
 
 //subtext for icons spacing and sizing
-.subText
-{
+.subText{
 	font-size: $under-button-size;
 	display: flex;
 	align-items: center;
@@ -90,42 +91,70 @@ a
 }
 
 //smaller header text size and style
-.reducedHeader
-{
+.reducedHeader{
 	font-size: $body-font-size;
 	font-weight: bold;
 }
 
 //flex box with space-around instead of center
-.rowSpaceAround
-{
+.rowSpaceAround{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
 
 //flex box with space-between instead of center
-.rowSpaceBetween
-{
+.rowSpaceBetween{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
 //flex box with the center
-.rowCenter
-{ 
+.rowCenter{ 
+	text-align: center;
 	display: flex;
 	justify-content: center;  
+	align-items: center;
 }
 
-.gridTemplate
-{
+//div container with two columns
+.colContainer{
+	display: grid;
+	text-align: left;
+	grid-template-columns: auto auto;
+	justify-content: space-evenly;
+}
+
+//div container with five columns
+.colContainer5{
+	
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	justify-content: space-evenly;
+}
+
+//div container with three columns
+.colContainer3{
+	
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-evenly;
+}
+
+//experience page
+.schoolLogos{
+	padding-right: 10rem;
+	padding-left: 10rem;
+	//display: flex;
+	//flex-direction: column;
+	//align-items: center;
+}
+
+//Sets the display to be in a grid format and then centers items horizontally
+.gridTemplate{
 	//sets the display in a grid
 	display: grid;
-	//sets the grid size
-	//grid-column-gap: 40vh;
-	//centers the items
 	justify-content: center;
 	justify-items: center;
 
@@ -134,45 +163,26 @@ a
 	//margin: 0 auto;
 }
 
-.gridIndex
-{
+.gridIndex{
 	grid-template-columns: repeat(5, minmax(100px, 1fr));
 }
 
-.gridContact
-{
+.gridContact{
 	grid-template-columns: repeat(4, minmax(100px, 1fr));
 }
 
-//text to lay against pictures
-.columnContainer
-{
-	text-align: left;
-	margin-left: 50px;
-}
-
-//pretty self explanitory
-.columnContainerNoMargin
-{
-	text-align: left;
-	margin: 0px;
-}
-
 //Puts a seperation margin for a bottom button
-.footer
-{
+.footer{
 	margin-top: 10vh;
 }
 
 //Puts a seperation margin for a bottom button
-.smallFooter
-{
+.smallFooter{
 	margin-top: 10vh;
 }
 
 //creates the base for a FA icon
-.button
-{
+.button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -191,28 +201,24 @@ a
 }
 
 //Highlights fa icon when moused over
-.highlight
-{
+.highlight{
 	background-color: $background-color;
   
-	&:hover
-	{
+	&:hover{
 		/* makes a drop shadow on the circle when highlighted by the mouse */
 		/* also adjusts border color */
 		box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 		border-color: $fa-dark;
 	}
 
-	&:hover i 
-	{
+	&:hover i {
 		/*changes FA icon color*/
 		color: $fa-dark;
 	}
 }
 
 //chevrons for education tab
-.downArrow
-{
+.downArrow{
 	color: $text-color;
 	font-size: $header-size;
 	margin-top: 30px;
@@ -220,160 +226,244 @@ a
 }
 
 //makes an indent for the unordered lists in the community page
-.indent
-{
+.indent{
 	padding-left: 100px;
 }
 
-//moves all items to the left
-#flexStart
-{
-	justify-content: flex-start;
+//makes it so that the webpage doesn't go from far end to far end
+.content{
+	margin-left: 25vmin;
+	margin-right: 25vmin;
+	//border: 20vh
 }
 
-//moves the bottom button to the middle on mobile webpages
-#middleFix
-{
-	//display: block;
-	//margin-left: 100vh;
+//moves all items to the left
+#flexStart{
+	justify-content: flex-start;
 }
 
 /**These ids are for tailoring each specific image*/
 //who am i page
-#headshot
-{
+#headshot{
 	border: solid 5px $text-color;	
-	width: 750px;
+	width: 350px;
 	height: auto;
 }
 
-//experience page
-#schoolLogos
-{
-	padding-top: 10vh;
-	padding-left: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 //education
-#lakeside
-{
+#lakeside{
 	border: solid 5px $text-color;
 	width: 200px;
 	height: auto;
 }
 
 //education
-#emory
-{
+#emory{
 	border: solid 5px $text-color;
 	width: 400px;
 	height: auto;
+	background-color: rgb(255, 255, 255);
 }
 
 //education
-#gt
-{
+#gt{
 	border: solid 5px $text-color;
 	width: 400px;
 	height: auto;
+	background-color: rgb(255, 255, 255);
 }
 
 //whoami
-#headshotMargin
-{
+#headshotMargin{
 	margin-top: 100px;
 	margin-left: 75px;
 }
 
 //Sets custom font size for bottom button
-#faButton
-{
+#faButton{
 	//font-size: 4rem;
 	font-size: $button-size-chevron;
 }
 
+#imageText{
+	display:grid;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+
 /**Animations for changing pages on the site*/
-@keyframes fadeInUp 
-{
-	0% 
-	{
+@keyframes fadeInUp{
+	0% {
 		opacity: 0;
 		transform: translate3d(0, 100%, 0);
 	}
 
-	100% 
-	{
+	100% {
 		opacity: 1;
 		transform: none;
 	}
 }
 
-@keyframes fadeIn 
-{
-	0% 
-	{
+@keyframes fadeIn{
+	0% {
 		opacity: 0;
 	}
 
-	100% 
-	{
+	100%{
 		opacity: 1;
 	}
 }
 
-@keyframes fadeInRight 
-{
-	0% 
-	{
+@keyframes fadeInRight{
+	0% {
 		opacity: 0;
 		transform: translate3d(100%, 0, 0);
 	}
 
-	100% 
-	{
+	100% {
 		opacity: 1;
 		transform: none;
 	}
 }
 
 //CSS Page Transitions
-.m-scene 
-{
+.m-scene{
 	/** Basic styles for an animated element */
-	.scene_element 
-	{
+	.scene_element {
 		animation-duration: 0.3s;
 		transition-timing-function: ease-in;
 		animation-fill-mode: both;
 	}
 
 	/** An element that fades in */
-	.scene_element--fadein 
-	{
+	.scene_element--fadein {
 		animation-name: fadeIn;
 	}
 
 	/** An element that fades in and slides up */
-	.scene_element--fadeinup 
-	{
+	.scene_element--fadeinup {
 		animation-name: fadeInUp;
 	}
 
 	/** An element that fades in and slides from the right */
-	.scene_element--fadeinright 
-	{
+	.scene_element--fadeinright {
 		animation-name: fadeInRight;
 	}
 
 	/** Reverse "exit" animations */
-	&.is-exiting 
-	{
+	&.is-exiting {
 		.scene_element 
 		{
 		animation-direction: alternate-reverse;
 		}
+	}
+
+	/** This is all created for my sisters hs graduation with a hidden webpage */
+	$fadetime: 6s;
+	$fadetimelong: 10s;
+	$fadetimesuperlong: 15s;
+	.fade-in {
+		animation: fadeIn ease $fadetime;
+		-webkit-animation: fadeIn ease $fadetime;
+		-moz-animation: fadeIn ease $fadetime;
+		-o-animation: fadeIn ease $fadetime;
+		-ms-animation: fadeIn ease $fadetime;
+	}
+
+	.fade-in-long {
+		animation: fadeInLong ease $fadetimelong;
+		-webkit-animation: fadeInLong ease $fadetimelong;
+		-moz-animation: fadeIn ease $fadetimelong;
+		-o-animation: fadeIn ease $fadetimelong;
+		-ms-animation: fadeIn ease $fadetimelong;
+	}
+	.fade-in-super-long {
+		animation: fadeInSuperLong ease $fadetimesuperlong;
+		-webkit-animation: fadeInSuperLong ease $fadetimesuperlong;
+		-moz-animation: fadeIn ease $fadetimesuperlong;
+		-o-animation: fadeIn ease $fadetimesuperlong;
+		-ms-animation: fadeIn ease $fadetimesuperlong;
+	}
+	
+	@keyframes fadeIn {
+		0% {
+			opacity:0;
+		}
+		
+		100% {
+			opacity:1;
+		}
+	}
+
+	@keyframes fadeInLong {
+		0% {
+			opacity:0;
+		}
+
+		50% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity:1;
+		}
+	}
+
+	@keyframes fadeInSuperLong {
+		0% {
+			opacity:0;
+		}
+
+		75% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-moz-keyframes fadeIn {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity:0;
+		}
+		100% {
+		opacity:1;
+		}
+	}
+
+	@-o-keyframes fadeIn {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	@-ms-keyframes fadeIn {
+		0% {
+			opacity:0;
+		}
+		100% {
+			opacity:1;
+		}
+	}
+
+	.threeimages {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 100%;
+		width: 100%
 	}
 }
