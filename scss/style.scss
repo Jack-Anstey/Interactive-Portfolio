@@ -134,6 +134,13 @@ a{
 	justify-content: space-evenly;
 }
 
+.colContainer6{
+	
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	justify-content: space-evenly;
+}
+
 //div container with three columns
 .colContainer3{
 	
