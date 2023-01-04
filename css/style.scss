@@ -3,9 +3,14 @@
 //but rather a way to force my own style instead of the limited bootstrap options
 
 //body-centric variables
-$background-gradient: #522cdb, #9a4cc7; //#2063f5, #9a4cc7; 
+$background-gradient: #522cdb, #9a4cc7;
 $text-color: white;
 $alt-text-color: #9a4cc7;
+$transition-time: 0.2s;
+
+//logo variables
+$logo-size: 80px;
+$opacity-transition: 0.85;
 
 //navigation variables
 $border-thiccness: 3px;
@@ -20,9 +25,9 @@ $logo-margin-left: 40px;
 $logo-margin-right: 40px;
 
 //footer variables
-$footer-height: 150px;
+$footer-height: 10rem;
 $footer-icon-size: 3rem;
-$footer-margin-left-right: 40px;
+$footer-margin-left-right: 2vw;
 $footer-padding: 20px;
 
 html {
@@ -89,10 +94,10 @@ a { //adjust how links look by default
 	text-align: center;
 
 	//define a transition between hovering and not hovering
-	transition: all .2s ease;	
+	transition: all $transition-time ease;	
 
 	&:hover { //change colors on hover
-		transition: all .2s ease;
+		transition: all $transition-time ease;
 		background-color: $border-color;
 		color: $alt-text-color !important;
 	}
@@ -113,13 +118,21 @@ a { //adjust how links look by default
 	font-size: $nav-hamburger-size !important;
 
 	//define a transition between hovering and not hovering
-	transition: all .2s ease;	
+	transition: all $transition-time ease;	
 
 	&:hover { //change colors on hover
-		transition: all .2s ease;
+		transition: all $transition-time ease;
 		background-color: $border-color;
 		color: $alt-text-color !important;
 	}
+
+	&:focus {
+		box-shadow: none !important; //overwrite bootstrap 5 with nothing
+	}
+}
+
+.direction-col { //make the flex direction of something column
+	flex-direction: column;
 }
 
 .footer-nav {
@@ -137,23 +150,35 @@ a { //adjust how links look by default
 	margin: 0px $footer-margin-left-right 0px $footer-margin-left-right;
 
 	//define a transition between hovering and not hovering
-	transition: all .2s ease;
+	transition: all $transition-time ease;
 
 	&:hover { //change colors on hover
-		transition: all .2s ease;
+		transition: all $transition-time ease;
 		background-color: $border-color;
 		color: $alt-text-color !important;
 	}
 }
 
-#logo {
+//todo the logo shifts down slightly when the website is resized to be smaller
+//check the margins
+#logo { //this is for the logo found in the top left
 	box-sizing: content-box;
 	
-	//make the logo a 100px by 100px circle
-	height: 100px;
-	width: 100px;
+	//make the logo a $logo-size by $logo-size circle
+	height: $logo-size;
+	width: $logo-size;
 
 	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
 	border-radius: 100%;
+
+	//default opacity of 1
+	opacity: 1;
+
+	//define a transition between hovering and not hovering
+	transition: all $transition-time ease;
+
+	&:hover { //instead of changing the color, change the opacity on hover
+		opacity: $opacity-transition;
+	}
 }
