@@ -1,0 +1,103 @@
+//site wide variables
+$background-gradient: #522cdb, #9a4cc7; //#2063f5, #9a4cc7; 
+$text-color: white;
+$alt-text-color: #9a4cc7;
+
+//navigation variables
+$border-thiccness: 3px;
+$border-color: white;
+$nav-text-size: 2rem;
+$nav-padding-left-right: 30px;
+$nav-padding-top-bottom: 10px;
+$nav-margin-left-right: 20px;
+$nav-margin-top-bottom: 20px;
+$logo-margin-left: 40px;
+$logo-margin-right: 40px;
+
+html {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh; //force the gradient to cover the entire page and not just where the content ends
+	background: linear-gradient(135deg, $background-gradient) !important; //force custom colors over bootstrap
+	color: $text-color !important; //force over font awesome
+	line-height: normal !important; //make the line height standard
+}
+
+footer {
+	position: fixed; //bring the footer to the bottom of the page
+	bottom: 0;
+	width: 100%; //have the footer span the entire width of the page
+	height: 60px; //the height of the footer
+}
+
+a { //adjust how links look by default
+	&:link {
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: $text-color;
+		text-decoration: none;
+	}
+
+	&:active {
+		color: $text-color;
+		text-decoration: none;
+	}
+}
+
+.navbar {
+	font-size: $nav-text-size;
+}
+
+.nav-bubble {
+	box-sizing: content-box;
+	
+	//make it so that the bubble is always the same size, mobile or not
+	display: flex !important;
+	justify-content: center;
+	align-self: center;
+
+	//make it so that's there is some space between the buttons when clicking
+	padding: $nav-padding-top-bottom $nav-padding-left-right $nav-padding-top-bottom $nav-padding-left-right !important;
+	margin: $nav-margin-top-bottom $nav-margin-left-right $nav-margin-top-bottom $nav-margin-left-right !important;
+	
+	//define the default state of the nav buttons
+	border: $border-thiccness solid $border-color;
+	border-radius: 100px 100px; //pill buttons
+	color: $text-color !important;
+	text-align: center;
+	// vertical-align: middle;
+	//justify-content: center !important;
+
+	//define a transition between hovering and not hovering
+	transition: all .2s ease; //shrink and get rid of shadow	
+	
+
+	//TODO: make it so that text is justified in the center vertically
+	&:hover {
+		transition: all .2s ease; //shrink and get rid of shadow	
+		background-color: white;
+	// 	background-image: linear-gradient(135deg, $background-gradient) !important;
+	// 	background-clip: text;
+		color: $alt-text-color !important;
+	}
+}
+
+#logo {
+	box-sizing: content-box;
+	height: 100px;
+	width: 100px;
+	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
+	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
+	border-radius: 100%;
+}
