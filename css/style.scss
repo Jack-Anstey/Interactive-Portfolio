@@ -1,4 +1,8 @@
-//site wide variables
+//site wide style
+//note: there are a lot of !important found -- this is not laziness
+//but rather a way to force my own style instead of the limited bootstrap options
+
+//body-centric variables
 $background-gradient: #522cdb, #9a4cc7; //#2063f5, #9a4cc7; 
 $text-color: white;
 $alt-text-color: #9a4cc7;
@@ -76,25 +80,46 @@ a { //adjust how links look by default
 	border-radius: 100px 100px; //pill buttons
 	color: $text-color !important;
 	text-align: center;
-	// vertical-align: middle;
-	//justify-content: center !important;
 
 	//define a transition between hovering and not hovering
-	transition: all .2s ease; //shrink and get rid of shadow	
+	transition: all .2s ease;	
 	
-
 	//TODO: make it so that text is justified in the center vertically
-	&:hover {
-		transition: all .2s ease; //shrink and get rid of shadow	
-		background-color: white;
-	// 	background-image: linear-gradient(135deg, $background-gradient) !important;
-	// 	background-clip: text;
+	&:hover { //change colors on hover
+		transition: all .2s ease;
+		background-color: $border-color;
+		color: $alt-text-color !important;
+	}
+}
+
+.navbar-toggler {
+	//make the spacing consistent with the logo on the left
+	margin-right: $logo-margin-left;
+
+	//make a new border in a similar style to the buttons
+	border-color: $border-color !important;
+	border: $border-thiccness solid $border-color !important;
+	border-radius: 100px 100px !important;
+	padding: $nav-padding-top-bottom $nav-padding-left-right $nav-padding-top-bottom $nav-padding-left-right !important;
+	
+	//make the color match the buttons
+	color: $text-color !important;
+	font-size: $nav-text-size*1.5 !important;
+
+	//define a transition between hovering and not hovering
+	transition: all .2s ease;	
+
+	&:hover { //change colors on hover
+		transition: all .2s ease;
+		background-color: $border-color;
 		color: $alt-text-color !important;
 	}
 }
 
 #logo {
 	box-sizing: content-box;
+	
+	//make the logo a 100px by 100px circle
 	height: 100px;
 	width: 100px;
 	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
