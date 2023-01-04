@@ -24,6 +24,13 @@ $nav-margin-top-bottom: 20px;
 $logo-margin-left: 40px;
 $logo-margin-right: 40px;
 
+//content variables
+$content-margin-left-right: 1rem;
+$content-margin-bottom: 2rem;
+$content-header-size: 2rem;
+$content-content-size: 1rem;
+$footer-offset: 10rem;
+
 //footer variables
 $footer-height: 10rem;
 $footer-icon-size: 3rem;
@@ -36,6 +43,7 @@ html {
 }
 
 body {
+	position: relative;
 	min-height: 100vh; //force the gradient to cover the entire page and not just where the content ends
 	background: linear-gradient(135deg, $background-gradient) !important; //force custom colors over bootstrap
 	color: $text-color !important; //force over font awesome
@@ -43,9 +51,9 @@ body {
 }
 
 footer {
-	position: fixed; //bring the footer to the bottom of the page
+	position: absolute; //bring the footer to the bottom of the page
 	bottom: 0;
-	width: 100%; //have the footer span the entire width of the page
+	width: 100%; //make the width of the entire page
 	height: $footer-height; //the height of the footer
 }
 
@@ -133,6 +141,27 @@ a { //adjust how links look by default
 
 .direction-col { //make the flex direction of something column
 	flex-direction: column;
+}
+
+.content-container {
+	border-color: $border-color;
+	border: $border-thiccness solid $border-color;
+	border-radius: 10px;
+	margin: 0px $content-margin-left-right $content-margin-bottom $content-margin-left-right;
+}
+
+.header {
+	font-size: $content-header-size;
+	padding-bottom: 5px;
+	border-bottom: $border-thiccness solid $border-color;
+}
+
+.content {
+	font-size: $content-content-size;
+}
+
+.footer-offset {
+	padding-bottom: $footer-offset; //this is to make the footer look normal on a phone screen
 }
 
 .footer-nav {
