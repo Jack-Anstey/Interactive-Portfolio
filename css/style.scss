@@ -11,12 +11,19 @@ $alt-text-color: #9a4cc7;
 $border-thiccness: 3px;
 $border-color: white;
 $nav-text-size: 2rem;
+$nav-hamburger-size: 3rem;
 $nav-padding-left-right: 30px;
 $nav-padding-top-bottom: 10px;
 $nav-margin-left-right: 20px;
 $nav-margin-top-bottom: 20px;
 $logo-margin-left: 40px;
 $logo-margin-right: 40px;
+
+//footer variables
+$footer-height: 150px;
+$footer-icon-size: 3rem;
+$footer-margin-left-right: 40px;
+$footer-padding: 20px;
 
 html {
 	scroll-behavior: smooth;
@@ -34,7 +41,7 @@ footer {
 	position: fixed; //bring the footer to the bottom of the page
 	bottom: 0;
 	width: 100%; //have the footer span the entire width of the page
-	height: 60px; //the height of the footer
+	height: $footer-height; //the height of the footer
 }
 
 a { //adjust how links look by default
@@ -83,8 +90,7 @@ a { //adjust how links look by default
 
 	//define a transition between hovering and not hovering
 	transition: all .2s ease;	
-	
-	//TODO: make it so that text is justified in the center vertically
+
 	&:hover { //change colors on hover
 		transition: all .2s ease;
 		background-color: $border-color;
@@ -102,12 +108,36 @@ a { //adjust how links look by default
 	border-radius: 100px 100px !important;
 	padding: $nav-padding-top-bottom $nav-padding-left-right $nav-padding-top-bottom $nav-padding-left-right !important;
 	
-	//make the color match the buttons
+	//make the color match the buttons (and make it larger)
 	color: $text-color !important;
-	font-size: $nav-text-size*1.5 !important;
+	font-size: $nav-hamburger-size !important;
 
 	//define a transition between hovering and not hovering
 	transition: all .2s ease;	
+
+	&:hover { //change colors on hover
+		transition: all .2s ease;
+		background-color: $border-color;
+		color: $alt-text-color !important;
+	}
+}
+
+.footer-nav {
+	//make the font awesome icons look like the other buttons!
+	color: $text-color !important;
+	font-size: $footer-icon-size !important;
+
+	//border shenanigans
+	padding: $footer-padding;
+	border-color: $border-color !important;
+	border: $border-thiccness solid $border-color !important;
+	border-radius: 100%;
+
+	//margin for creating more space between each icon
+	margin: 0px $footer-margin-left-right 0px $footer-margin-left-right;
+
+	//define a transition between hovering and not hovering
+	transition: all .2s ease;
 
 	&:hover { //change colors on hover
 		transition: all .2s ease;
@@ -122,6 +152,7 @@ a { //adjust how links look by default
 	//make the logo a 100px by 100px circle
 	height: 100px;
 	width: 100px;
+
 	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
 	border-radius: 100%;
