@@ -224,6 +224,8 @@ a { //adjust how links look by default
 
 	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
+	border-color: $border-color !important;
+	border: $border-thiccness solid $border-color !important;
 	border-radius: 100%;
 
 	//default opacity of 1
@@ -244,6 +246,8 @@ a { //adjust how links look by default
 
 	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
+	border-color: $border-color !important;
+	border: $border-thiccness solid $border-color !important;
 	border-radius: 100%;
 
 	//default opacity of 1
