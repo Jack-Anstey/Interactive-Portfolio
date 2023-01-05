@@ -9,7 +9,8 @@ $alt-text-color: #9a4cc7;
 $transition-time: 0.2s;
 
 //logo variables
-$logo-size: 80px;
+$logo-size: 5rem;
+$logo-error-size: 15rem;
 $opacity-transition: 0.85;
 
 //navigation variables
@@ -37,13 +38,18 @@ $footer-icon-size: 3rem;
 $footer-margin-left-right: 2vw;
 $footer-padding: 20px;
 
+//contact variables
+$contact-icon-size: 4rem;
+$contact-padding-left-right: 33.3px; //larger circles so to make them SEEM circular I make them slightly wider
+$contact-padding-top-bottom: 30px;
+
 html {
 	scroll-behavior: smooth;
 	box-sizing: border-box;
 }
 
 body {
-	position: relative;
+	position: relative; //to make the footer work no matter the screen size
 	min-height: 100vh; //force the gradient to cover the entire page and not just where the content ends
 	background: linear-gradient(135deg, $background-gradient) !important; //force custom colors over bootstrap
 	color: $text-color !important; //force over font awesome
@@ -79,11 +85,11 @@ a { //adjust how links look by default
 	}
 }
 
-.navbar {
+.navbar { //make the text for the navigation menu larger
 	font-size: $nav-text-size;
 }
 
-.nav-bubble {
+.nav-bubble { //adjust the links on the navigation menu
 	box-sizing: content-box;
 	
 	//make it so that the bubble is always the same size, mobile or not
@@ -143,20 +149,20 @@ a { //adjust how links look by default
 	flex-direction: column;
 }
 
-.content-container {
+.content-container { //make the container that holds the content into a visible box
 	border-color: $border-color;
 	border: $border-thiccness solid $border-color;
 	border-radius: 10px;
 	margin: 0px $content-margin-left-right $content-margin-bottom $content-margin-left-right;
 }
 
-.header {
+.header { //make the header text of the boxes larger
 	font-size: $content-header-size;
 	padding-bottom: 5px;
 	border-bottom: $border-thiccness solid $border-color;
 }
 
-.content {
+.content { //the size of the text in the boxes on the main page
 	font-size: $content-content-size;
 }
 
@@ -188,14 +194,53 @@ a { //adjust how links look by default
 	}
 }
 
-//todo the logo shifts down slightly when the website is resized to be smaller
-//check the margins
+.contact-nav {
+	//make the font awesome icons look like the other buttons!
+	color: $text-color !important;
+	font-size: $contact-icon-size !important;
+
+	//border shenanigans
+	padding: $contact-padding-top-bottom $contact-padding-left-right $contact-padding-top-bottom $contact-padding-left-right;
+	border-color: $border-color !important;
+	border: $border-thiccness solid $border-color !important;
+	border-radius: 100%;
+
+	//define a transition between hovering and not hovering
+	transition: all $transition-time ease;	
+
+	&:hover { //change colors on hover
+		transition: all $transition-time ease;
+		background-color: $border-color;
+		color: $alt-text-color !important;
+	}
+}
+
 #logo { //this is for the logo found in the top left
 	box-sizing: content-box;
 	
 	//make the logo a $logo-size by $logo-size circle
 	height: $logo-size;
 	width: $logo-size;
+
+	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
+	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
+	border-radius: 100%;
+
+	//default opacity of 1
+	opacity: 1;
+
+	//define a transition between hovering and not hovering
+	transition: all $transition-time ease;
+
+	&:hover { //instead of changing the color, change the opacity on hover
+		opacity: $opacity-transition;
+	}
+}
+
+#error-logo { //this is for the error page
+	//make the logo a $logo-size by $logo-size circle
+	height: $logo-error-size;
+	width: $logo-error-size;
 
 	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
