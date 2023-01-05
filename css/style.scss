@@ -181,9 +181,6 @@ a { //adjust how links look by default
 	border: $border-thiccness solid $border-color !important;
 	border-radius: 100%;
 
-	//margin for creating more space between each icon
-	//margin: 0px $footer-margin-left-right 0px $footer-margin-left-right;
-
 	//define a transition between hovering and not hovering
 	transition: all $transition-time ease;
 
@@ -222,7 +219,6 @@ a { //adjust how links look by default
 	height: $logo-size;
 	width: $logo-size;
 
-	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
 	border-color: $border-color !important;
 	border: $border-thiccness solid $border-color !important;
@@ -244,7 +240,6 @@ a { //adjust how links look by default
 	height: $logo-error-size;
 	width: $logo-error-size;
 
-	//padding: 0px $nav-padding-left-right 0px $nav-padding-left-right;
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
 	border-color: $border-color !important;
 	border: $border-thiccness solid $border-color !important;
