@@ -46,7 +46,7 @@ $contact-padding-left-right: 30px;
 $contact-padding-top-bottom: 30px;
 
 /**
-* standard html style
+* Standard html style
 */
 html {
 	scroll-behavior: smooth;
@@ -54,7 +54,7 @@ html {
 }
 
 /** 
-* standard body style
+* Standard body style
 */
 body {
 	position: relative; //to make the footer work no matter the screen size
@@ -65,7 +65,7 @@ body {
 }
 
 /** 
-* standard footer style
+* Standard footer style
 */
 footer {
 	position: absolute; //bring the footer to the bottom of the page
@@ -75,7 +75,7 @@ footer {
 }
 
 /** 
-* adjust how links look by default
+* Adjust how links look by default
 */
 a {
 	&:link {
@@ -100,7 +100,7 @@ a {
 }
 
 /** 
-* navbar style
+* Navbar style
 */
 .navbar { 
 	//make the text for the navigation menu larger
@@ -108,7 +108,7 @@ a {
 }
 
 /**
-* style for the naviation bubbles
+* Style for the naviation bubbles
 */
 .nav-bubble { 
 	//adjust the links on the navigation menu
@@ -140,7 +140,7 @@ a {
 }
 
 /** 
-* hamburger menu that appears when the screen is narrow style
+* Hamburger menu that appears when the screen is narrow style
 */
 .navbar-toggler {
 	//make the spacing consistent with the logo on the left
@@ -171,14 +171,14 @@ a {
 }
 
 /** 
-* make the flex direction of a div column
+* Make the flex direction of a div column
 */
 .direction-col {
 	flex-direction: column;
 }
 
 /** 
-* make the container that holds the content into a visible box
+* Make the container that holds the content into a visible box
 */
 .content-container { 
 	border-color: $border-color;
@@ -188,7 +188,7 @@ a {
 }
 
 /** 
-* make the header text of the boxes larger
+* Make the header text of the boxes larger
 */
 .header {
 	font-size: $content-header-size;
@@ -197,23 +197,43 @@ a {
 }
 
 /** 
-* the size of the text in the boxes on the main page
+* The size of the text in the boxes on the main page
 */
 .content {
 	font-size: $content-content-size;
 }
 
 /** 
-* this is to make the footer look normal on a phone screen
+* This is to make the footer look normal on a phone screen
 */
 .footer-offset {
 	padding-bottom: $footer-offset;
 }
 
 /** 
-* the definitions that make up each bubble
+* The boxes that the footer bubbles live in
 */
-.footer-nav {
+.footer-bubble-box{
+	//create a div around each nav bubble that is the exact final size we want
+	display: flex;
+	width: $footer-icon-size*2;
+	height: $footer-icon-size*2;
+}
+
+/** 
+* The boxes that the contact bubbles live in
+*/
+.contact-bubble-box{
+	//create a div around each nav bubble that is the exact final size we want
+	display: flex;
+	width: $contact-icon-size*2;
+	height: $contact-icon-size*2;
+}
+
+/** 
+* The definitions that make up each bubble in the footer and on the contact page
+*/
+.contact-bubble {
 	//place the nav bubble in the exact position we want that is the size of the parent .footer-bubble div
 	display: flex;
 	justify-content: center;
@@ -225,9 +245,8 @@ a {
 
 	//make the font awesome icons look like the other buttons!
 	color: $text-color !important;
-	font-size: $footer-icon-size !important;
 
-	//border shenanigans
+	//border shenanigans i.e. make a "bubble"
 	border-color: $border-color !important;
 	border: $border-thiccness solid $border-color !important;
 	border-radius: 50%;
@@ -242,106 +261,58 @@ a {
 	}
 }
 
-/** 
-* the boxes that the footer bubbles live in
+/**
+* Make the text in the contact bubbles larger
 */
-.footer-bubble{
-	//create a div around each nav bubble that is the exact final size we want
-	display: flex;
-	align-self: center;
-	width: $footer-icon-size*2;
-	height: $footer-icon-size*2;
-}
-
-/** 
-* the boxes that the contact bubbles live in
-*/
-.contact-bubble{
-	//create a div around each nav bubble that is the exact final size we want
-	display: flex;
-	align-self: center;
-	width: $contact-icon-size*2;
-	height: $contact-icon-size*2;
-}
-
-/** 
-* the definitions that make up each bubble
-*/
-.contact-nav {
-	//center horizontally and vertically in the parent div and be the size of the parent div
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-
-	//make the font awesome icons look like the other buttons!
-	color: $text-color !important;
+.large-bubble {
+	//the large bubbles are on the contact page
 	font-size: $contact-icon-size !important;
+}
 
-	//border shenanigans
+/**
+* Make the text in the contact bubbles smaller
+*/
+.small-bubble {
+	//the small bubbles are on the regular home page
+	font-size: $footer-icon-size !important;
+}
+
+/** 
+* This is general style for the logo
+*/
+.logo {
+	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
 	border-color: $border-color !important;
 	border: $border-thiccness solid $border-color !important;
 	border-radius: 100%;
 
-	//define a transition between hovering and not hovering
-	transition: all $transition-time ease;	
+	//default opacity of 1
+	opacity: 1;
 
-	&:hover { //change colors on hover
-		transition: all $transition-time ease;
-		background-color: $border-color;
-		color: $alt-text-color !important;
+	//define a transition between hovering and not hovering
+	transition: all $transition-time ease;
+
+	&:hover { //instead of changing the color, change the opacity on hover
+		opacity: $opacity-transition;
 	}
 }
 
-/** 
-* this is for the logo found in the top left
+/**
+* Style specifically for the logo on the home page
 */
-#logo {
+#default-logo {
 	box-sizing: content-box;
 	
 	//make the logo a $logo-size by $logo-size circle
 	height: $logo-size;
 	width: $logo-size;
-
-	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
-	border-color: $border-color !important;
-	border: $border-thiccness solid $border-color !important;
-	border-radius: 100%;
-
-	//default opacity of 1
-	opacity: 1;
-
-	//define a transition between hovering and not hovering
-	transition: all $transition-time ease;
-
-	&:hover { //instead of changing the color, change the opacity on hover
-		opacity: $opacity-transition;
-	}
 }
 
 /** 
-* this is for the error page
+* This is style for the error page
 */
 #error-logo {
 	//make the logo a $logo-size by $logo-size circle
 	height: $logo-error-size;
 	width: $logo-error-size;
-
-	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
-	border-color: $border-color !important;
-	border: $border-thiccness solid $border-color !important;
-	border-radius: 100%;
-
-	//default opacity of 1
-	opacity: 1;
-
-	//define a transition between hovering and not hovering
-	transition: all $transition-time ease;
-
-	&:hover { //instead of changing the color, change the opacity on hover
-		opacity: $opacity-transition;
-	}
 }
