@@ -16,7 +16,7 @@ $logo-error-size: 15rem;
 $opacity-transition: 0.85;
 
 //navigation variables
-$border-thiccness: 3px;
+$border-thickness: 3px;
 $border-color: white;
 $nav-text-size: 2rem;
 $nav-hamburger-size: 3rem;
@@ -32,6 +32,8 @@ $content-margin-left-right: 1rem;
 $content-margin-bottom: 2rem;
 $content-header-size: 3rem;
 $content-content-size: 1.5rem;
+$heading-padding-bottom: 5px;
+$bold-weight: 600;
 $footer-offset: 10rem;
 
 //footer variables
@@ -108,7 +110,7 @@ a {
 }
 
 /**
-* Style for the naviation bubbles
+* Style for the navigation bubbles
 */
 .nav-bubble { 
 	//adjust the links on the navigation menu
@@ -124,7 +126,7 @@ a {
 	margin: $nav-margin-top-bottom $nav-margin-left-right $nav-margin-top-bottom $nav-margin-left-right !important;
 	
 	//define the default state of the nav buttons
-	border: $border-thiccness solid $border-color;
+	border: $border-thickness solid $border-color;
 	border-radius: 100px 100px; //pill buttons
 	color: $text-color !important;
 	text-align: center;
@@ -148,7 +150,7 @@ a {
 
 	//make a new border in a similar style to the buttons
 	border-color: $border-color !important;
-	border: $border-thiccness solid $border-color !important;
+	border: $border-thickness solid $border-color !important;
 	border-radius: 100px 100px !important;
 	padding: $nav-padding-top-bottom $nav-padding-left-right $nav-padding-top-bottom $nav-padding-left-right !important;
 	
@@ -182,9 +184,16 @@ a {
 */
 .content-container { 
 	border-color: $border-color;
-	border: $border-thiccness solid $border-color;
+	border: $border-thickness solid $border-color;
 	border-radius: 10px;
 	margin: 0px $content-margin-left-right $content-margin-bottom $content-margin-left-right;
+}
+
+/**
+* Set the font weight to be "bold", overriding everything else
+*/
+.font-weight-bold {
+	font-weight: $bold-weight !important; // needed to override bootstrap
 }
 
 /** 
@@ -192,8 +201,8 @@ a {
 */
 .header {
 	font-size: $content-header-size;
-	padding-bottom: 5px;
-	border-bottom: $border-thiccness solid $border-color;
+	padding-bottom: $heading-padding-bottom; // Referenced directly in scale-fonts.js
+	border-bottom: $border-thickness solid $border-color;
 }
 
 /** 
@@ -248,7 +257,7 @@ a {
 
 	//border shenanigans i.e. make a "bubble"
 	border-color: $border-color !important;
-	border: $border-thiccness solid $border-color !important;
+	border: $border-thickness solid $border-color !important;
 	border-radius: 50%;
 
 	//define a transition between hovering and not hovering
@@ -283,7 +292,7 @@ a {
 .logo {
 	margin: 0px $logo-margin-right 0px $logo-margin-left !important;
 	border-color: $border-color !important;
-	border: $border-thiccness solid $border-color !important;
+	border: $border-thickness solid $border-color !important;
 	border-radius: 100%;
 
 	//default opacity of 1
